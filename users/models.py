@@ -18,7 +18,7 @@ class UserManager(BaseUserManager):
             username=username,
             nickname=nickname,
             university=university,
-            email=email,
+            email=email
         )
 
         user.set_password(password)
@@ -35,7 +35,7 @@ class UserManager(BaseUserManager):
             password=password,
             nickname=nickname,
             university=university,
-            email=email,
+            email=email
         )
 
         user.is_admin = True
@@ -87,7 +87,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
 
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['nickname', 'university']
+    REQUIRED_FIELDS = ['nickname', 'university', 'email']
 
     class Meta:
         verbose_name = _('user')
