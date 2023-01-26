@@ -1,11 +1,14 @@
 import traceback
 # Create your views here.
 from rest_framework import generics, status, permissions
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from rest_framework.response import Response
 from .models import User
 from django.utils.encoding import force_str
 from django.utils.http import urlsafe_base64_decode
 from rest_framework.authtoken.models import Token
+from django.shortcuts import redirect
 
 from .serializers import RegisterSerializer, LoginSerializer
 
@@ -46,9 +49,9 @@ class UserActivate(APIView):
                 user.is_active = True
                 token = Token.objects.create(user=user)
                 user.save()
-                return Response(user.email + '계정이 활성화 되었습니다', status=status.HTTP_200_OK)
+                return HttpResponseRedirect(reverse('user:login'))
             else:
-                return Response('만료된 링크입니다', status=status.HTTP_400_BAD_REQUEST)
+                return HttpResponseRedirect(reverse('user:register'))
 
         except Exception as e:
             print(traceback.format_exc())

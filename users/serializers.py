@@ -17,7 +17,7 @@ from django.utils.http import urlsafe_base64_encode
 UNIVERSITY_CHOICES = (
     ('dongduk', '동덕여자대학교'),
     ('sungshin', '성신여자대학교'),
-    ('ssu', '숭실대학교'),
+    ('soongsil', '숭실대학교'),
     ('hanyang', '한양대학교')
 )
 
@@ -77,7 +77,7 @@ class RegisterSerializer(serializers.ModelSerializer):
             'token': account_activation_token.make_token(user),
         })
 
-        mail_subject = 'test'
+        mail_subject = 'Complete your account registration'
         to_email = user.email
         email = EmailMessage(mail_subject, message, to=[to_email])
         email.send()
