@@ -4,9 +4,8 @@ from .views import RegisterView, LoginView, UserActivate,  RegisterView  # ,Sign
 app_name = 'user'
 
 urlpatterns = [
-    path('register/', RegisterView.as_view()),
+    path('register/', RegisterView.as_view(), name='register'),
     path('login/', LoginView.as_view(), name='login'),
-    path('activate/Ng/login/', LoginView.as_view()),
-    path('activate/<str:uidb64>/<str:token>',
-         UserActivate.as_view(), name='activate')
+    #path('activate/Ng/login/', LoginView.as_view()),
+    path('activate/<str:uidb64>/<str:token>', UserActivate.as_view(), name='activate')
 ]

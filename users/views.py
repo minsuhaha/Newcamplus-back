@@ -1,7 +1,7 @@
 import traceback
 # Create your views here.
 from rest_framework import generics, status, permissions
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from rest_framework.response import Response
 from .models import User
@@ -38,8 +38,8 @@ class UserActivate(APIView):
     permission_classes = (permissions.AllowAny,)
 
     def get(self, request, uidb64, token):
-        try:
-            uid = force_str(urlsafe_base64_decode(uidb64))  # .encode('utf-8')
+        try: 
+            uid = force_str(urlsafe_base64_decode(uidb64)) # 암호화된 유저의 PK # .encode('utf-8')
             user = User.objects.get(pk=uid)
         except (TypeError, ValueError, OverflowError, User.DoesNotExist):
             user = None
@@ -49,9 +49,10 @@ class UserActivate(APIView):
                 user.is_active = True
                 token = Token.objects.create(user=user)
                 user.save()
-                return HttpResponseRedirect(reverse('user:login'))
+                return HttpResponseRedirect(reverse('user:login')) # 계정 활성화가 되면 바로 login 페이지로
+            
             else:
-                return HttpResponseRedirect(reverse('user:register'))
+                return HttpResponseRedirect(reverse('user:register')) # 만료된 링크를 타고 들어가면 다시 회원가입 페이지로
 
         except Exception as e:
             print(traceback.format_exc())

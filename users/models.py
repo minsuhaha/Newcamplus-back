@@ -87,7 +87,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
 
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['nickname', 'university', 'email']
+    REQUIRED_FIELDS = ['nickname', 'university', 'email'] #필수로 받아야 되는 필드
 
     class Meta:
         verbose_name = _('user')
