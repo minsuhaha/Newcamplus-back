@@ -75,7 +75,7 @@ class CommentViewSet(viewsets.ModelViewSet):
     permission_classes = [CustomReadOnly]
 
     def get_serializer_class(self):
-        if self.action == 'list' or 'retrieve':
+        if self.action == 'list' or self.action == 'retrieve':
             return CommentSerializer
         return CommentCreateSerializer
 

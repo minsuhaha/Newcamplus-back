@@ -23,10 +23,12 @@ UNIVERSITY_CHOICES = (
 
 
 class RegisterSerializer(serializers.ModelSerializer):
+    
     email = serializers.EmailField(
         required=True,
         validators=[UniqueValidator(queryset=User.objects.all())],
     )
+    
     nickname = serializers.CharField(
         required=True,
         validators=[UniqueValidator(queryset=User.objects.all())]
@@ -68,18 +70,18 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.set_password(validated_data['password'])
         user.is_active = False
         user.save()
-
+        
         message = render_to_string('users/authentication_email.html', {
-            'user': user,
+            'user': user, # 생성한 사용자 객체
             'domain': 'localhost:8000',  # 나중에 배포할 때 url 이름으로 변경
             # .decode('utf-8')
-            'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-            'token': account_activation_token.make_token(user),
+            'uid': urlsafe_base64_encode(force_bytes(user.pk)), # 암호화된 User pk
+            'token': account_activation_token.make_token(user), # 생성한 사용자 객체를 통해 생성한 token 값
         })
 
         mail_subject = 'Complete your account registration'
         to_email = user.email
-        email = EmailMessage(mail_subject, message, to=[to_email])
+        email = EmailMessage(mail_subject, message, to=[to_email]) # EmailMessage(제목,내용,받는이)
         email.send()
         return user
 
