@@ -49,10 +49,10 @@ class UserActivate(APIView):
                 user.is_active = True
                 token = Token.objects.create(user=user)
                 user.save()
-                return HttpResponseRedirect(reverse('user:login')) # 계정 활성화가 되면 바로 login 페이지로
+                return HttpResponseRedirect('http://camsplus.site') # 계정 활성화가 되면 바로 프론트엔드 login 페이지로
             
             else:
-                return HttpResponseRedirect(reverse('user:register')) # 만료된 링크를 타고 들어가면 다시 회원가입 페이지로
+                return HttpResponseRedirect('http://camsplus.site/signup') # 만료된 링크를 타고 들어가면 다시 프론트엔드 회원가입 페이지로
 
         except Exception as e:
             print(traceback.format_exc())

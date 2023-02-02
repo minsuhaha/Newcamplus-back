@@ -73,7 +73,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         
         message = render_to_string('users/authentication_email.html', {
             'user': user, # 생성한 사용자 객체
-            'domain': 'localhost:8000',  # 나중에 배포할 때 url 이름으로 변경
+            'domain': 'camplus.pythonanywhere.com',  # 나중에 배포할 때 url 이름으로 변경
             # .decode('utf-8')
             'uid': urlsafe_base64_encode(force_bytes(user.pk)), # 암호화된 User pk
             'token': account_activation_token.make_token(user), # 생성한 사용자 객체를 통해 생성한 token 값
