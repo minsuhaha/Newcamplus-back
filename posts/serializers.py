@@ -33,9 +33,6 @@ class PostSerializer(serializers.ModelSerializer):
         fields = ("pk", "author", "title", "category",
                   "body", "location",  "published_date")
 
-    # def get_profile(self, obj):
-    #     return UserInfoSerializer(obj.author).data
-
     def get_author(self, obj):
         return UserInfoSerializer(obj.author).data
 
@@ -46,9 +43,7 @@ class PostSerializer(serializers.ModelSerializer):
 # Post 세부목록(상세페이지) 이때만 댓글이 같이 보이도록 설정
 class PostRetrieveSerializer(serializers.ModelSerializer):
     author = serializers.SerializerMethodField()
-    # author = UserInfoSerializer()
     comments = CommentSerializer(many=True, read_only=True)
-    # univ = serializers.SerializerMethodField()
 
     class Meta:
         model = Post
