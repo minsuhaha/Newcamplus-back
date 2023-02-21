@@ -11,6 +11,6 @@
 * 이진혁 - 멘토
 
 ## 프로젝트 소개
-<img width="500", alt="camplus-login" src="https://user-images.githubusercontent.com/105342203/220269545-d82819f7-e343-42ef-a8c1-95b36bf60a86.png">
+<img width="480" alt="camplus-login" src="https://user-images.githubusercontent.com/105342203/220269545-d82819f7-e343-42ef-a8c1-95b36bf60a86.png">
 * 대학 생활을 하면서 다양한 필요용품이 필요할 때가 있다. 하지만 이를 대처할만한 어플이 없다는 점에서 기획하게 되었다.
 * 기존 대학 생활 대표 어플리케이션의 단점을 보안하여 필요 용품만을 대여하면서 오로지 필요 용품이 있을 때 유용하게 사용할 수 있는 맞춤형 서비스를 제공하고자 하였다.
