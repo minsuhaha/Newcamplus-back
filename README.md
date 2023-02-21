@@ -19,13 +19,13 @@
 
 ## 프로젝트 소개
 #### 회원가입 및 로그인  
-<img width="500" alt="camplus-login" src="https://user-images.githubusercontent.com/105342203/220269545-d82819f7-e343-42ef-a8c1-95b36bf60a86.png"> <img width="500" alt="camplus-register" src="https://user-images.githubusercontent.com/105342203/220272479-8b828794-1b3d-4aed-ac16-527c8f0583c9.png">  
+<img width="400" alt="camplus-login" src="https://user-images.githubusercontent.com/105342203/220269545-d82819f7-e343-42ef-a8c1-95b36bf60a86.png"> <img width="400" alt="camplus-register" src="https://user-images.githubusercontent.com/105342203/220272479-8b828794-1b3d-4aed-ac16-527c8f0583c9.png">  
 
 #### 게시글 및 댓글
-<img width="500" alt="게시물" src="https://user-images.githubusercontent.com/105342203/220275099-c6f59fb4-7fbe-4bf4-b4ce-872241bda4d2.png"> <img width="500" alt="상세게시물" src="https://user-images.githubusercontent.com/105342203/220275365-c87b0560-b01d-4bde-9986-caa228415ee3.png">  
+<img width="400" alt="게시물" src="https://user-images.githubusercontent.com/105342203/220275099-c6f59fb4-7fbe-4bf4-b4ce-872241bda4d2.png"> <img width="400" alt="상세게시물" src="https://user-images.githubusercontent.com/105342203/220275365-c87b0560-b01d-4bde-9986-caa228415ee3.png">  
 
 #### 게시글 작성 및 마이페이지
-<img width="500" alt="작성" src="https://user-images.githubusercontent.com/105342203/220276459-bb8dbdf6-bae3-4808-9aa1-c43ff9c0c64f.png"> <img width="500" alt="마이페이지" src="https://user-images.githubusercontent.com/105342203/220275933-3131c36a-f48c-431c-a4ce-daec0839334f.png">    
+<img width="400" alt="작성" src="https://user-images.githubusercontent.com/105342203/220276459-bb8dbdf6-bae3-4808-9aa1-c43ff9c0c64f.png"> <img width="400" alt="마이페이지" src="https://user-images.githubusercontent.com/105342203/220275933-3131c36a-f48c-431c-a4ce-daec0839334f.png">    
 <br>  
 
 ## 핵심 기능
