@@ -1,4 +1,4 @@
-# camplus 프로젝트  
+# CAMPLUS 프로젝트  
 ## 개발 기간
 #### 2022.12.28 ~ 2023.02.03
 [Camsplus 사이트 바로가기](http://camsplus.site)
@@ -27,6 +27,11 @@
 #### 게시글 작성 및 마이페이지
 <img width="412" alt="작성" src="https://user-images.githubusercontent.com/105342203/220276459-bb8dbdf6-bae3-4808-9aa1-c43ff9c0c64f.png"> <img width="412" alt="마이페이지" src="https://user-images.githubusercontent.com/105342203/220275933-3131c36a-f48c-431c-a4ce-daec0839334f.png">    
 <br>  
+
+## CAMPLUS 홈페이지 이용법
+* 회원가입 후 회원가입 시 입력한 학교 이메일로 이동하여 이메일 인증 완료하기
+* 로그인해서 자유롭게 게시글, 댓글 작성하기   
+<br>
 
 ## 핵심 기능
 ### 학교 이메일 인증
@@ -66,7 +71,7 @@
 <br>  
 
 ## 향후 보완점 (BE 부분) 
-* 학교 이메일 인증 전에는 유저정보가 데이터베이스에 들어가지 않도록 설정!
+* 학교 이메일 인증 전에는 유저정보가 데이터베이스에 들어가지 않도록 설정
 * 서버측에서 학교 이메일 유효성 검사를 진행
 * University 모델 추가 생성을 통해 User 모델과 분리
 * DRF 에서 제공하는 TokenAuthentication 사용하여 Token만으로 인증을 하였기에 보안에 취약하므로 향후 JWT 방식으로 변경
