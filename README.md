@@ -75,4 +75,7 @@
 * 서버측에서 학교 이메일 유효성 검사를 진행
 * University 모델 추가 생성을 통해 User 모델과 분리
 * DRF 에서 제공하는 TokenAuthentication 사용하여 Token만으로 인증을 하였기에 보안에 취약하므로 향후 JWT 방식으로 변경
+<<<<<<< HEAD
 
+=======
+>>>>>>> a94307d1565766ce87e6742844fe4420ddf5bff6
