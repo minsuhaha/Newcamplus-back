@@ -1,5 +1,5 @@
 # CAMPLUS 프로젝트  
-## 개발 기간 .
+## 개발 기간
 #### 2022.12.28 ~ 2023.02.03
 [Camsplus 사이트 바로가기](http://camsplus.site)
 <br>  
